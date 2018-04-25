@@ -16,5 +16,5 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    #path('', include('backend.urls')),
+    path('test/', include('backend.urls')),
 ]
