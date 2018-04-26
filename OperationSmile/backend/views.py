@@ -1,6 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import Comment
+from .serializers import CommentSerializer
+
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Hello Index!")
+class CommentView(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer

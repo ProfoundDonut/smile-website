@@ -15,6 +15,11 @@ Including another URLconf
 """
 from django.urls import path, include
 from . import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('comments', views.CommentView, )
+
 urlpatterns = [
-    path('index/', views.index),
+    path('', include(router.urls))
 ]
