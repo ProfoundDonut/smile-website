@@ -74,7 +74,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'OperationSmile.wsgi.application'
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:5000/contact.html',
+    'http://localhost:5000/contact.html',
     'https://operation-smile-a268b.firebaseapp.com/contact.html'
 )
 
