@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'backend',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'OperationSmile.wsgi.application'
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:5000',
+    'https://operation-smile-a268b.firebaseapp.com'
+)
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
